@@ -48,6 +48,21 @@ int main()
     int &pnt { yes };
     int num{};
 
+    int outer{ 5 };
+    while (outer >= 1)
+    {
+        
+        int inner{ 1 };
+        while (inner <= outer)
+        {
+            std::cout << "*" << ' ';
+            ++inner;
+        }
+
+        std::cout << '\n';
+        --outer;
+    } 
+
     for (int i{ 0 }; i < sizeof(studentNames) / sizeof(studentNames[0]); i++)
     {
         std::cout << studentNames[i] << std::endl;
